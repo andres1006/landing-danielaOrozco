@@ -6,9 +6,8 @@ import ServiceSection from "./components/ServiceSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FinalCTASection from "./components/FinalCTASection";
 import WhatsAppButton from "./components/WhatsAppButton";
+import { NumberPhone } from "./components/contants";
 import "./globals.css";
-
-export const NumberPhone = "573052076906";
 
 export default function Home() {
   return (

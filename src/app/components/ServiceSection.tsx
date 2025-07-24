@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { NumberPhone } from "../page";
+import { NumberPhone } from "./contants";
 
 interface ServiceSectionProps {
   title: string;
