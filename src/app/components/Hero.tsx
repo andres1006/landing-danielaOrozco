@@ -9,7 +9,7 @@ declare global {
     gtag: (
       command: string,
       targetId: string,
-      config?: Record<string, any>
+      config?: Record<string, unknown>
     ) => void;
   }
 }
@@ -29,9 +29,6 @@ export default function Hero({
   highlight,
   subtitle,
   ctaText,
-  ctaHref,
-  heroImageSrc,
-  heroImageAlt,
 }: HeroProps) {
   return (
     <header className="relative flex items-center justify-center mx-auto mb-10 shadow-[0_2px_24px_rgba(247,198,212,0.08)] overflow-hidden min-h-[70vh] w-full py-20 md:py-32 lg:py-40">

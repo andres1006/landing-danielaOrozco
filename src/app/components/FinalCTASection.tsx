@@ -14,7 +14,6 @@ export default function FinalCTASection({
   title,
   paragraph,
   ctaText,
-  ctaHref,
   smallText,
 }: FinalCTASectionProps) {
   return (
