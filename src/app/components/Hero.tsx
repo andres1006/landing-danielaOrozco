@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { NumberPhone } from "./contants";
 
 interface HeroProps {
   title: string;
@@ -67,22 +68,28 @@ export default function Hero({
           <p className="text-base sm:text-lg md:text-xl mb-8 font-normal leading-7 drop-shadow-xl max-w-[480px] text-white">
             {subtitle}
           </p>
-          <a
-            href={ctaHref}
-            className="inline-block font-bold text-base md:text-lg px-7 md:px-10 py-3 md:py-4 rounded-full bg-[#e6a6b8] text-white shadow-2xl hover:bg-[#f7c6d4] hover:text-[#222] transition mb-4 md:mb-0 animate-pulse-bounce"
+          <button
+            onClick={() => {
+              window.open(
+                `https://wa.me/${NumberPhone}?text=Hola Daniela, quiero iniciar mi proceso de sanación. ¿Podemos agendar mi primera sesión?`,
+                "_blank"
+              );
+            }}
+            className="inline-block font-bold text-base md:text-lg px-7 md:px-10 py-3 md:py-4 rounded-full bg-[#e6a6b8] text-white shadow-2xl hover:bg-[#f7c6d4] hover:text-[#222] transition mb-4 md:mb-0 animate-pulse-bounce cursor-pointer"
             aria-label={ctaText}
           >
             {ctaText}
-          </a>
+          </button>
         </div>
         <div className="flex-1 flex justify-center md:justify-end items-center">
-          <div className="rounded-full overflow-hidden shadow-2xl bg-[#f7c6d4] flex items-center justify-center w-[240px] h-[240px] sm:w-[240px] sm:h-[240px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px]">
-            <Image
-              src={heroImageSrc}
-              alt={heroImageAlt}
-              width={540}
-              height={540}
-              priority
+          <div className="rounded-3xl overflow-hidden shadow-2xl bg-[#f7c6d4] flex items-center justify-center w-[240px] h-[320px] sm:w-[280px] sm:h-[380px] md:w-[320px] md:h-[420px] lg:w-[360px] lg:h-[480px]">
+            <video
+              src="/Presentacion-Daniela.mp4"
+              autoPlay
+              loop
+              playsInline
+              muted
+              controls
               className="object-cover w-full h-full"
             />
           </div>

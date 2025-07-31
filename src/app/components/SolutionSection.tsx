@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { NumberPhone } from "./contants";
 
 interface SolutionSectionProps {
   title: string;
@@ -41,12 +44,17 @@ export default function SolutionSection({
               {p}
             </p>
           ))}
-          <a
-            href="#agenda"
+          <button
+            onClick={() => {
+              window.open(
+                `https://wa.me/${NumberPhone}?text=Hola Daniela, quiero iniciar mi proceso de sanación. ¿Podemos agendar mi primera sesión?`,
+                "_blank"
+              );
+            }}
             className="mt-6 inline-block font-bold text-lg px-8 py-4 rounded-full bg-[#e6a6b8] text-white shadow hover:bg-[#f7c6d4] hover:text-[#222] transition cursor-pointer"
           >
             Quiero iniciar mi proceso de sanación
-          </a>
+          </button>
         </div>
       </div>
     </section>

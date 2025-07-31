@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { NumberPhone } from "./contants";
 
 interface AboutSectionProps {
   title: string;
@@ -41,12 +44,17 @@ export default function AboutSection({
               {p}
             </p>
           ))}
-          <a
-            href="#agenda"
+          <button
+            onClick={() => {
+              window.open(
+                `https://wa.me/${NumberPhone}?text=Hola Daniela, me gustaría agendar una consulta contigo. ¿Podemos coordinar una sesión?`,
+                "_blank"
+              );
+            }}
             className="mt-6 inline-block font-bold text-lg px-8 py-4 rounded-full bg-[#e6a6b8] text-white shadow hover:bg-[#f7c6d4] hover:text-[#222] transition cursor-pointer"
           >
             Agenda una consulta conmigo
-          </a>
+          </button>
         </div>
       </div>
     </section>

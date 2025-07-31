@@ -1,5 +1,7 @@
 "use client";
 
+import { NumberPhone } from "./contants";
+
 interface PainSectionProps {
   title: string;
   items: string[];
@@ -38,12 +40,17 @@ export default function PainSection({ title, items }: PainSectionProps) {
           ))}
         </ul>
         <div className="flex justify-center mt-10">
-          <a
-            href="#agenda"
+          <button
+            onClick={() => {
+              window.open(
+                `https://wa.me/${NumberPhone}?text=Hola Daniela, me identifico con estos sentimientos y quiero empezar mi consulta gratuita. ¿Podemos agendar?`,
+                "_blank"
+              );
+            }}
             className="inline-block font-bold text-lg px-8 py-4 rounded-full bg-[#e6a6b8] text-white shadow hover:bg-[#f7c6d4] hover:text-[#222] transition cursor-pointer"
           >
             Quiero empezar consulta GRATIS
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import ServiceSection from "./components/ServiceSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FinalCTASection from "./components/FinalCTASection";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Footer from "./components/Footer";
 import { NumberPhone } from "./components/contants";
 import "./globals.css";
 
@@ -61,11 +62,15 @@ export default function Home() {
       </section>
       <section className="">
         <ServiceSection
-          title="Un proceso de sanación a tu medida, estés donde estés"
+          title="Descubre tu personalidad, transforma tu vida"
           items={[
-            "Sesiones online, confidenciales y adaptadas a tus necesidades.",
-            "Herramientas prácticas para gestionar emociones y sanar heridas.",
-            "Un espacio seguro para hablar, sentir y transformar tu vida.",
+            "¿Alguna vez has sentido que reaccionas sin entender por qué?",
+            "¿Que te repites en las mismas relaciones o decisiones?",
+            "Tu personalidad guarda las pistas.",
+            "No se trata de encasillarte, sino de conocerte.",
+            "Porque solo quien se conoce, puede transformarse.",
+            "Tu personalidad es el mapa, pero tú decides el camino.",
+            "Conócete para vivir con más sentido.",
           ]}
         />
       </section>
@@ -93,6 +98,8 @@ export default function Home() {
           smallText="Plazas limitadas. Tu bienestar merece ser una prioridad."
         />
       </section>
+      {/* FOOTER */}
+      <Footer />
       {/* BOTÓN FLOTANTE WHATSAPP */}
       <WhatsAppButton phone={NumberPhone} ariaLabel="Contactar por WhatsApp" />
     </div>

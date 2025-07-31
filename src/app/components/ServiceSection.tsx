@@ -13,7 +13,10 @@ const serviceImages = [
   "/meditacion.jpg",
   "/Calma.jpg",
   "/paz.jpg",
-  // Agrega más imágenes si tienes más servicios
+  "/tranquilidad.jpg",
+  "/volando.jpg",
+  "/meditacion.jpg",
+  "/Calma.jpg",
 ];
 
 export default function ServiceSection({ title, items }: ServiceSectionProps) {
@@ -32,7 +35,7 @@ export default function ServiceSection({ title, items }: ServiceSectionProps) {
               onClick={() => {
                 // enviar a whatsapp
                 window.open(
-                  `https://wa.me/${NumberPhone}?text=Hola, quiero agendar una consulta con Daniela Orozco.`,
+                  `https://wa.me/${NumberPhone}?text=Hola Daniela, quiero conocerme mejor y trabajar en mi autoconocimiento. ¿Podemos agendar una sesión?`,
                   "_blank"
                 );
               }}

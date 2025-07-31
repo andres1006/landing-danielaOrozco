@@ -11,7 +11,7 @@ export default function WhatsAppButton({
 }: WhatsAppButtonProps) {
   return (
     <a
-      href={`https://wa.me/${phone}`}
+      href={`https://wa.me/${phone}?text=Hola Daniela, quiero iniciar mi proceso de sanación. ¿Podemos agendar mi primera sesión?`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed right-8 bottom-8 z-[1000] bg-none border-none p-0 cursor-pointer shadow-2xl rounded-full transition-transform duration-200 flex items-center justify-center hover:scale-110 hover:shadow-2xl animate-wa-bounce md:right-6 md:bottom-6"

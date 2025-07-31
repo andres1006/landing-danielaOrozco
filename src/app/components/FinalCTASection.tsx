@@ -1,5 +1,7 @@
 "use client";
 
+import { NumberPhone } from "./contants";
+
 interface FinalCTASectionProps {
   title: string;
   paragraph: string;
@@ -24,13 +26,18 @@ export default function FinalCTASection({
         <p className="mb-3 text-lg md:text-xl text-[#444] leading-7 font-normal max-w-xl">
           {paragraph}
         </p>
-        <a
-          href={ctaHref}
-          className="inline-block font-bold text-xl md:text-2xl px-12 py-5 rounded-full bg-gradient-to-r from-[#e6a6b8] to-[#f7c6d4] text-white shadow-xl hover:from-[#f7c6d4] hover:to-[#e6a6b8] hover:text-[#222] transition-all duration-300 transform hover:scale-105 animate-pulse"
+        <button
+          onClick={() => {
+            window.open(
+              `https://wa.me/${NumberPhone}?text=Hola Daniela, estoy listo/a para empezar mi proceso de sanación. ¿Podemos agendar mi primera sesión?`,
+              "_blank"
+            );
+          }}
+          className="inline-block font-bold text-xl md:text-2xl px-12 py-5 rounded-full bg-gradient-to-r from-[#e6a6b8] to-[#f7c6d4] text-white shadow-xl hover:from-[#f7c6d4] hover:to-[#e6a6b8] hover:text-[#222] transition-all duration-300 transform hover:scale-105 animate-pulse cursor-pointer"
           aria-label={ctaText}
         >
           {ctaText}
-        </a>
+        </button>
         <small className="block text-[#e6a6b8] mt-3 tracking-[0.01em] text-base font-semibold animate-fade-in-up">
           {smallText}
         </small>
