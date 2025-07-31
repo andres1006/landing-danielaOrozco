@@ -3,6 +3,17 @@
 import Image from "next/image";
 import { NumberPhone } from "./contants";
 
+// Declaración de tipos para gtag
+declare global {
+  interface Window {
+    gtag: (
+      command: string,
+      targetId: string,
+      config?: Record<string, any>
+    ) => void;
+  }
+}
+
 interface HeroProps {
   title: string;
   highlight: string;
@@ -70,8 +81,18 @@ export default function Hero({
           </p>
           <button
             onClick={() => {
+              // Google Ads Conversion Tracking
+              if (typeof window !== "undefined" && window.gtag) {
+                window.gtag("event", "conversion", {
+                  send_to: "AW-CONVERSION_ID/CONVERSION_LABEL",
+                  value: 1.0,
+                  currency: "USD",
+                  transaction_id: Date.now().toString(),
+                });
+              }
+
               window.open(
-                `https://wa.me/${NumberPhone}?text=Hola Daniela, quiero iniciar mi proceso de sanación. ¿Podemos agendar mi primera sesión?`,
+                `https://wa.me/${NumberPhone}?text=Hola Daniela, soy hispanohablante en Miami y quiero agendar mi primera sesión gratuita. ¿Podemos coordinar?`,
                 "_blank"
               );
             }}
