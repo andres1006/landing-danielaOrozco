@@ -7,7 +7,7 @@ export default function GoogleAnalytics() {
     <>
       {/* Google Analytics */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17421502407"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -15,7 +15,7 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'GA_MEASUREMENT_ID', {
+          gtag('config', 'AW-17421502407', {
             page_title: 'Psicóloga Daniela Orozco Miami',
             page_location: 'https://www.daniela-orozco.com',
             custom_map: {
@@ -25,9 +25,9 @@ export default function GoogleAnalytics() {
           });
           
           // Enhanced Ecommerce for Google Ads
-          gtag('config', 'AW-CONVERSION_ID', {
+          gtag('config', 'AW-17421502407', {
             allow_enhanced_conversions: true,
-            conversion_id: 'AW-CONVERSION_ID',
+            conversion_id: 'AW-17421502407',
             conversion_label: 'CONVERSION_LABEL'
           });
         `}
