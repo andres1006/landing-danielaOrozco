@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import JsonLd from "./components/JsonLd";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://daniela-orozco.com"),
+  metadataBase: new URL("https://www.daniela-orozco.com"),
   alternates: {
     canonical: "/",
   },
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: "Psicóloga Daniela Orozco | Terapia Online en Español | Miami",
     description:
       "Psicóloga colombiana especializada en terapia online en español. Ayudo a hispanohablantes en Miami con ansiedad, depresión, duelo migratorio y autoconocimiento.",
-    url: "https://daniela-orozco.com",
+    url: "https://www.daniela-orozco.com",
     siteName: "Daniela Orozco Psicóloga",
     images: [
       {
@@ -99,10 +100,11 @@ export default function RootLayout({
         <meta name="DC.date" content="2024" />
         <meta name="DC.type" content="Service" />
         <meta name="DC.format" content="text/html" />
-        <meta name="DC.identifier" content="https://daniela-orozco.com" />
+        <meta name="DC.identifier" content="https://www.daniela-orozco.com" />
         <meta name="DC.language" content="es" />
         <meta name="DC.coverage" content="Miami, Florida, Estados Unidos" />
         <meta name="DC.rights" content="© 2024 Daniela Orozco Z." />
+        <GoogleAnalytics />
       </head>
       <body className={inter.className}>
         <JsonLd />
